@@ -1,4 +1,4 @@
-#movies img, #movie img {
+#movies img .poster, #movie img .poster{
   width: 100%;
 }
 
