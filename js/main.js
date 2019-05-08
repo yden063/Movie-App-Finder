@@ -107,7 +107,7 @@ function movieDetails(imdbID) {
 function apiGET(paramsURL) {
   // URL creation
   const API_KEY = '5d88bb13';
-  const baseURL = `http://www.omdbapi.com/?apikey=${API_KEY}`;
+  const baseURL = `https://omdbapi.com/?apikey=${API_KEY}`;
   const fullURL = `${baseURL}&${paramsURL}`;
 
   // Request to the API
