@@ -10,16 +10,19 @@ $(document).ready(() => {
       .then((movies) => {
         // Removing the previous elements
         $('#movies').empty();
-
+        console.log(movies);
         // Displaying the movies 
         $.each(movies, (index, movie) => {
           let output = `
-          <div class='col-md-3'>
-            <div class='well text-center'>
-              <img src='${movie.Poster}'>
-              <h5>${movie.Title}</h5>
+            <div class='col-md-3'>
+              <div class='well text-center'>
+                <img src='${movie.Poster}'>
+                <h5>${movie.Title}</h5>
+                <a href='#' onclick='movieDetails("${movie.imdbID})'>
+                  <button type="button" class="btn btn-secondary">Details</button>
+                </a>
+              </div>
             </div>
-          </div>
           `;
 
           $('#movies').append(output);
