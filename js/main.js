@@ -18,7 +18,7 @@ $(document).ready(() => {
               <div class='well text-center'>
                 <img src='${movie.Poster}'>
                 <h5>${movie.Title}</h5>
-                <a href='#' onclick='movieDetails("${movie.imdbID})'>
+                <a href='#' onclick='movieDetails("${movie.imdbID}")'>
                   <button type="button" class="btn btn-secondary">Details</button>
                 </a>
               </div>
@@ -48,4 +48,9 @@ function getMovies(searchText) {
     });
 
   return results;
+}
+
+function movieDetails(imdbID) {
+  sessionStorage.setItem('imdbID', imdbID);
+  window.location = 'movie.html';
 }
